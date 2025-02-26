@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tours & Travels</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .logo {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+      .image-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 36px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        text-align: center;
+        padding: 10px;
+      }
+      .first {
+        text-align: center;
+        color: chocolate;
+      }
+      .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-description {
+        padding: 15px;
+      }
+      .second {
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: purple;
+      }
+      .ken{
+        display: flex;
+        margin: 50px;
+        gap: 30px;
+      }
+      .card-title{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: chocolate;
+      }
+      .ben{
+       display: flex;
+       gap: 0%;
+       margin: 50px;
+       justify-content: center;
+      }
+      .one{
+        width: 300px;
+        height: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    font-size: 16px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #f4b400;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#">Janja tours and travel</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="toursandtravel.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#">More</a>
+            <ul class="dropdown-content">
+              <li><a href="https://youtu.be/EUiLOzmUouo?si=434zcnz0p4bA1f0q">Blog</a></li>
+              <li><a href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Gallery</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </nav>
+    </header>
+    <br>
+    <div class="image-container">
+      <img src="ai-generated-9056131_1280.jpg" alt="Travel Image" />
+      <div class="overlay-text">
+        <p>
+          <i
+            >Explore the world
+            <br>
+            with Janja tours and travel.
+          </i>
+        </p>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2
+        class="first"
+        style="
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        ">
+        Janja tours and travel,Kenya
+      </h2>
+      <br />
+      <p>
+        <b>Janja Tours and Travel</b
+        ><i>
+          is a dynamic and customer-focused travel agency dedicated to providing
+          unforgettable travel experiences. With a wide range of carefully
+          curated tour packages, we cater to diverse travel preferences, from
+          exotic getaways to adventure-filled explorations. Our team of
+          experienced professionals ensures seamless planning, personalized
+          itineraries, and top-notch customer service, making every journey
+          hassle-free and memorable. Whether you're looking to explore
+          breathtaking destinations or indulge in unique cultural experiences,
+          Janja Tours and Travel is your trusted partner in creating the perfect
+          vacation.</i>
+      </p>
+      <br />
+      <h3
+        class="first"
+        style="
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        "
+      >
+        "Think Travel,Think Janja"
+      </h3>
+    </div>
+    <br />
+    <br />
+    <div class="card-container">
+      <div class="card">
+        <img src="maasaimara.jpg" alt="maasaimara" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/4Ph8QeU" class="second"
+              >Maasai Mara Game Reseve</a>
+          </h3>
+          <p><i>Explore the beautiful landscapes and vibrant culture.</i></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="nairobinationalpark.jpg" alt="nairobinationalpark" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/2qRtKuS" class="second"
+              >Nairobi National Park</a>
+          </h3>
+          <p><i>Experience the best beaches and scenic views.</i></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="hellsgate.jpg" alt="hellsgate" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/zhPzfjQ" class="second"
+              >Hells Gate National Park</a>
+          </h3>
+          <p><i>Adventure awaits in the heart of the mountains.</i></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="serengeti.jpg" alt="serengeti" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/AockYYL" class="second"
+              >Serengeti National Park</a>
+          </h3>
+          <p>
+            <i>A vast wildlife reserve in Tanzania, known for the Great Migration
+            and abundant wildlife, including lions, elephants and giraffes.</i>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="Lakenakuru.jpg" alt="Lakenakurunationalpark" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/hDNTZf4" class="second"
+              >Lake Nakuru National Park</a>
+          </h3>
+          <p>
+            <i>Famous for its flamingos and diverse wildlife, including rhinos and
+            lions, set against a stunning lake and forest backdrop.</i>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="malindisanddunes.jpg" alt="malindisanddunes" />
+        <div class="card-description">
+          <h3>
+            <a href="https://g.co/kgs/HLTebTH" class="second"
+              >Mambrui sand dunes</a>
+          </h3>
+          <p><i>
+            Known for their striking golden sands and picturesque landscapes,
+            these dunes offer a unique natural attraction for visitors, perfect
+            for scenic views and exploration.</i>
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <p><h2 style="text-align: center;"><i>WHY CHOOSE US?</i></h2></p>
+    <br>
+    <div class="ken">
+      <div class="card-body">
+        <h3 class="card-title">Leading tours and travelling company</h3>
+        <br>
+        <p class="card-text">
+          <i>At Janja Tours and Travel, we pride ourselves on providing personalized travel experiences tailored to each client's preferences. Whether you're seeking a relaxing beach holiday, an adventurous safari, or a cultural exploration, we craft itineraries that match your interests, ensuring every trip is memorable and unique.</i>
+        </p>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Best tour packages</h3>
+        <br>
+        <p class="card-text">
+          <i>Our team of experienced professionals is dedicated to making your journey seamless. From booking flights to arranging accommodations and guided tours, we handle all the details, allowing you to focus on enjoying your vacation. We also offer 24/7 customer support to assist you before, during, and after your travels.<i</p>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Reliable travelling agency</h3>
+        <br>
+        <p class="card-text">
+          <i>What sets us apart is our commitment to customer satisfaction. We work with trusted partners and local experts to provide you with the best value for your money. With competitive pricing and a focus on quality service, you can trust Janja Tours and Travel to deliver an exceptional travel experience that exceeds expectations.</i>
+        </p>
+      </div>
+    </div>
+    
+  <br>
+  <br>
+  <h2 style="text-align: center; color: brown;"><b><u>The Big 5</u></b></h2>
+  <div class="ben">
+    <img class="one" src="lion.jpg" alt="lion"/>
+    <div class="card-description">
+    </div>
+    <img class="one" src="bufallo.jpg" alt="bufallo"/>
+    <div class="card-description">
+    </div>
+    <img class="one" src="elephant.jpg" alt="elephant"/>
+    <div class="card-description">
+    </div>
+    <img class="one" src="leopard.jpg" alt="leopard"/>
+    <div class="card-description">
+    </div>
+    <img class="one" src="rhino.jpg" alt="rhino"/>
+    <div class="card-description">
+    </div>
+  </div>
+  <br>
+  <footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Janja Tours and Travel. All Rights Reserved.</p>
+        <div class="social-links">
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-google" aria-hidden="true"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+    </div>
+</footer>
+  </body>
+</html>

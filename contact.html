@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Janja Tours and Travels</title>
+    <link rel="stylesheet" href="destinations.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .submit-btn:active {
+            background-color: #1a66b5;
+            transform: scale(0.98);
+        }
+
+        .submit-btn:focus {
+            outline: none;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .travels{
+    text-decoration: none;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+    </style>
+</head>
+<body>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required placeholder="Enter your age">
+            </div>
+            <div class="form-group">
+                <label for="adults">Number of Adults</label>
+                <input type="number" id="adults" name="adults" required placeholder="Number of adults">
+            </div>
+            <div class="form-group">
+                <label for="children">Number of Children</label>
+                <input type="number" id="children" name="children" required placeholder="Number of children">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="USA">Kenya</option>
+                    <option value="Canada">Tanzania</option>
+                    <option value="UK">Uganda</option>
+                    <option value="India">Ethiopia</option>
+                    <option value="Australia">Rwanda</option>
+                    <option value="South Africa">Burundi</option>
+                   
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <div id="output"></div> 
+    <script>
+       
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const adults = document.getElementById('adults').value;
+            const children = document.getElementById('children').value;
+            const phone = document.getElementById('phone').value;
+            const country = document.getElementById('country').value;
+
+            
+            if (name && age && adults && children && phone && country) {
+                
+                document.getElementById('output').textContent = `Thank you, ${name}! Your message has been submitted. We will contact you soon.`;
+
+                
+                document.getElementById('contactForm').reset();
+            } else {
+                document.getElementById('output').textContent = 'Please fill in all the fields before submitting.';
+            }
+        });
+    </script>
+    <br>
+    <br>
+    <a href="toursandtravel.html" class="travels"><b><i>Janja tours and travels</i></b></a>
+</body>
+</html>
