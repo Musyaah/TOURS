@@ -1,7 +1,120 @@
 body{
-    background-image:url(ai-generated-9056131_1280.jpg) ;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: bisque;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .money{
+    margin: 50px;
+    padding: 20px;
+  }
+  .navbar .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+    }
+
+    .ken {
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    .ben {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .one {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1.5rem;
+    }
+
+    .first {
+      font-size: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-description p {
+      font-size: 0.9rem;
+    }
+  }

@@ -1,196 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Cards</title>
-    <link rel="stylesheet" href="destinations.css">
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="destinations.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <style>
+    .card-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
 
-body {
-    font-family: Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
+      .card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        transition: transform 0.3s ease-in-out;
+      }
 
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+      .card:hover {
+        transform: translateY(-10px);
+      }
 
-.card {
-    width: 300px;
-    height: 350px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    transition: transform 0.3s ease-in-out;
-}
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
 
-.card:hover {
-    transform: translateY(-10px);
-}
+      .card-description {
+        padding: 15px;
+      }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-description {
-    padding: 15px;
-}
-
-.card-description h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.card-description p {
-    font-size: 16px;
-    color: #555;
-}
-.two{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-.second {
+      .second {
         text-decoration: none;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        color: purple;
+        color: chocolate;
+      }
+
+      .Ken {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-container p {
+        font-size: 16px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .social-links a:hover {
+        color: #f4b400;
+      }
+      .navbar-toggler-icon {
+  background-color: white !important;
+  border: none !important; 
 }
-.travels{
-    text-decoration: none;
-    color: brown;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-}
-    </style>
+  </style>
 </head>
 <body>
-    <h2 class="two">Our travel destinations:</h2>
-    <br>
-    <br>
-    <div class="card-container">
-        <div class="card">
-            <img src="hellsgate.jpg" alt="hellsgate">
-            <div class="card-description">
-                <a href="https://g.co/kgs/zhPzfjQ" class="second"
-              >Hells Gate National Park</a>
-          </h3>
-          <p><i>Adventure awaits in the heart of the mountains.</i></p>
-            </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
         </div>
-        <div class="card">
-            <img src="malindisanddunes.jpg" alt="malindisanddunes">
-            <div class="card-description">
-                <a href="https://g.co/kgs/HLTebTH" class="second"
-              >Mambrui sand dunes</a>
-          </h3>
-          <p><i>
-            Known for their striking golden sands and picturesque landscapes,
-            these dunes offer a unique natural attraction for visitors, perfect
-            for scenic views and exploration.</i>
-          </p>
-            </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto"> 
+            <li class="nav-item">
+              <a class="nav-link text-white" href="toursandtravel.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="aboutus.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="watch.html">Contact us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
+                <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="card">
-            <img src="maasaimara.jpg" alt="maasaimara">
-            <div class="card-description">
-                <a href="https://g.co/kgs/4Ph8QeU" class="second"
-                >Maasai Mara Game Reseve</a>
-            </h3>
-            <p><i>Explore the beautiful landscapes and vibrant culture.</i></p>
-            </div>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <img src="nairobinationalpark.jpg" alt="hellsgate">
-                <div class="card-description">
-                    <h3>
-                        <a href="https://g.co/kgs/2qRtKuS" class="second"
-                          >Nairobi National Park</a>
-                      </h3>
-                      <p><i>Experience the best beaches and scenic views.</i></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="Lakenakuru.jpg" alt="Lakenakuru">
-                <div class="card-description">
-                    <a href="https://g.co/kgs/hDNTZf4" class="second"
-                    >Lake Nakuru National Park</a>
-                </h3>
-                <p>
-                  <i>Famous for its flamingos and diverse wildlife, including rhinos and
-                  lions, set against a stunning lake and forest backdrop.</i>
-                </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="serengeti.jpg" alt="serengeti">
-                <div class="card-description">
-                <a href="https://g.co/kgs/AockYYL" class="second"
-                    >Serengeti National Park</a>
-                </h3>
-                <p>
-                  <i>A vast wildlife reserve in Tanzania, known for the Great Migration
-                  and abundant wildlife, including lions, elephants and giraffes.</i>
-                </p>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <img src="olpegeta.jpeg" alt="olpegeta">
-                    <div class="card-description">
-                        <h3>
-                            <a href="https://g.co/kgs/2qRtKuS" class="second"
-                              >Olpegeta National Park</a>
-                          </h3>
-                          <p><i>Ol Pejeta Conservancy, located in Kenya, is a wildlife sanctuary known for its conservation efforts
-                            and diverse animal species. It is home to endangered rhinos, including the last two northern white rhinos,
-                             and offers opportunities for game drives, safaris, and unique experiences like lion tracking.</i></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Kisumuimpalasanctuary.jpeg" alt="Lakenakuru">
-                    <div class="card-description">
-                        <a href="https://g.co/kgs/hDNTZf4" class="second"
-                        >Kisumu Impala Sanctuary</a>
-                    </h3>
-                    <p>
-                      <i>Kisumu Impala Sanctuary, located in Kenya, is a small wildlife reserve on the shores of Lake Victoria.
-                         It is home to a variety of animals, including impalas, zebras, buffaloes, and over 100 bird species.
-                          The sanctuary offers scenic views and is a peaceful destination for nature walks and wildlife viewing.</i>
-                    </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="shimbahills.jpeg" alt="serengeti">
-                    <div class="card-description">
-                    <a href="https://g.co/kgs/AockYYL" class="second"
-                        >Serengeti National Park</a>
-                    </h3>
-                    <p>
-                      <i>Shimba Hills National Park, located in Kenya, is a beautiful coastal reserve known for its lush forests, rolling hills, and diverse wildlife.
-                         It's home to the endangered sable antelope, as well as elephants </i>
-                    </p>
-                    </div>
-                </div>
-        </div>
+      </div>
+    </nav>
+  </header>
+
+  <br>
+  <h2 class="Ken">Our travel destinations:</h2>
+  <br>
+  <div class="card-container">
+
+  </div>
+  <br>
+  <div class="card-container">
+    <div class="card">
+      <img src="maasaimara.jpg" alt="maasaimara" />
+      <div class="card-description">
+        <h3>
+          <a href="maasaimara.html" class="second">Maasai Mara Game Reserve</a>
+        </h3>
+        <p><i>
+          Masai Mara is a renowned Kenyan wildlife reserve, famous for its breathtaking landscapes and rich biodiversity. 
+          It's best known for the annual Great Migration of wildebeest, offering incredible safari experiences with big cats, elephants, and more.
+        </i></p>
+      </div>
     </div>
-    <br>
-    <br>
-    <a href="toursandtravel.html" class="travels"><b><i>Janja tours and travels</i></b></a>
-    
+    <div class="card">
+      <img src="nairobinationalpark.jpg" alt="nairobinationalpark" />
+      <div class="card-description">
+        <h3>
+          <a href="Nairobi.html" class="second">Nairobi National Park</a>
+        </h3>
+        <p><i>
+          Nairobi National Park is a unique wildlife reserve located just outside Kenya's capital. It offers stunning views of the city skyline, where visitors can see a variety of animals, including lions, giraffes, and zebras, set against the backdrop of urban life.
+        </i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="hellsgate.jpg" alt="hellsgate" />
+      <div class="card-description">
+        <h3>
+          <a href="Hellsgate.html" class="second">Hells Gate National Park</a>
+        </h3>
+        <p><i>
+          Hell's Gate National Park, located near Lake Naivasha, is known for its dramatic landscapes, including deep gorges, hot springs, and towering cliffs. It offers visitors a chance to hike, bike, and explore its diverse wildlife, making it a unique and adventurous destination.
+        </i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="serengeti.jpg" alt="serengeti" />
+      <div class="card-description">
+        <h3>
+          <a href="serengeti.html" class="second">Serengeti National Park</a>
+        </h3>
+        <p><i>A vast wildlife reserve in Tanzania, known for the Great Migration and abundant wildlife, including lions, elephants, and giraffes.</i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Lakenakuru.jpg" alt="Lakenakurunationalpark" />
+      <div class="card-description">
+        <h3>
+          <a href="lakenakuru.html" class="second">Lake Nakuru National Park</a>
+        </h3>
+        <p><i>Famous for its flamingos and diverse wildlife, including rhinos and lions, set against a stunning lake and forest backdrop.</i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="malindisanddunes.jpg" alt="malindisanddunes" />
+      <div class="card-description">
+        <h3>
+          <a href="mambrui.html" class="second">Mambrui sand dunes</a>
+        </h3>
+        <p><i>Known for their striking golden sands and picturesque landscapes, these dunes offer a unique natural attraction for visitors, perfect for scenic views and exploration.</i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="istockphoto-624444382-612x612.jpg" alt="Lakenakurunationalpark" />
+      <div class="card-description">
+        <h3>
+          <a href="tsavo.html" class="second">Tsavo National Park</a>
+        </h3>
+        <p><i>Tsavo National Park, one of Kenya's largest and oldest parks, is famous for its vast savannahs, diverse wildlife, and iconic red elephants. It offers a unique safari experience with stunning landscapes and abundant animal sightings.</i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="istockphoto-1171980595-612x612.jpg" alt="Lakenakurunationalpark" />
+      <div class="card-description">
+        <h3>
+          <a href="amboseli.html" class="second">Amboseli National Park</a>
+        </h3>
+        <p><i>Amboseli National Park, located at the foot of Mount Kilimanjaro, is renowned for its stunning landscapes and large herds of elephants. It offers incredible wildlife sightings and breathtaking views of Africa's highest peak.</i></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="shimbahills.jpeg" alt="Lakenakurunationalpark" />
+      <div class="card-description">
+        <h3>
+          <a href="shimbahills.html" class="second">Shimba hills National Park</a>
+        </h3>
+        <p><i>Shimba Hills National Park is a scenic coastal reserve in Kenya, known for its lush forests, diverse wildlife, and stunning views. It's home to elephants, giraffes, and the rare sable antelope, offering a peaceful escape into nature.</i></p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Janja Tours and Travel. All Rights Reserved.</p>
+      <div class="social-links">
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-google" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

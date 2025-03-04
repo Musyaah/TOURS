@@ -1,53 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="about.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Layout | Paragraph and Image</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   <style>
+    body{
+      background-color: bisque;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .flex-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; 
+    }
+
+    .text-left {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .text-right {
+      flex: 1;
+    }
+
+    .center-text {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+    .custom-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .money{
+    margin: 50px;
+    padding: 20px;
+  }
+  .navbar .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+    }
 
     .ken {
-        display: flex;
-        margin: 50px;
-        gap: 30px;
-      }
-      .ben{
-        font-family: "Times New Roman", Times, serif;
-      text-align: center;
-      font-size: x-large;
-      font-weight: 200;
+      flex-direction: column;
+      margin: 20px;
+    }
 
+    .ben {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .one {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1.5rem;
+    }
+
+    .first {
+      font-size: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-description p {
+      font-size: 0.9rem;
+    }
+  }
+  footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
       }
-      .card-title{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: chocolate;
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
       }
-      .travels{
-    text-decoration: none;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-    text-align: left;
+
+      .footer-container p {
+        font-size: 16px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .social-links a:hover {
+        color: #f4b400;
+      }
+      .third{
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .fourth{
+        text-align: center;
       }
   </style>
-  <body>
-    <h2 class="ben">About us:</h2>
-    <p>
-      <i>At <b>Janja Tours and Travels</b>, we are passionate about creating
-      unforgettable travel experiences. With years of expertise in the tourism
-      industry, we specialize in curating personalized tours that cater to every
-      traveler’s needs. Whether you're seeking an adventure in nature, a
-      cultural immersion, or a relaxing getaway, our team is dedicated to
-      providing you with exceptional service and expert guidance. From booking
-      flights and accommodations to organizing local excursions and tours, we
-      take care of every detail, ensuring that your journey is seamless and
-      memorable. At Janja Tours and Travels, your dream vacation is just a
-      booking away. Come explore the world with us!</i>
-    </p>
-    <br>
-    <h3><b>Our Commitment to Excellence,</b></h3>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Janja tours and travel</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="toursandtravel.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="watch.html">Contact us</a></li>
+        <li class="dropdown">
+          <a href="#">More</a>
+          <ul class="dropdown-content">
+            <li><a href="contact.html">Request a quote</a></li>
+            <li><a href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+  </header>
+  <br>
+<div class="container mt-5">
+  <div class="flex-container">
+    
+    <div class="text-left">
+      <h2 class="third">About us:</h2>
+      <p>
+        <i>At <b>Janja Tours and Travels</b>, we are passionate about creating
+        unforgettable travel experiences. With years of expertise in the tourism
+        industry, we specialize in curating personalized tours that cater to every
+        traveler’s needs. Whether you're seeking an adventure in nature, a
+        cultural immersion, or a relaxing getaway, our team is dedicated to
+        providing you with exceptional service and expert guidance. From booking
+        flights and accommodations to organizing local excursions and tours, we
+        take care of every detail, ensuring that your journey is seamless and
+        memorable. At Janja Tours and Travels, your dream vacation is just a
+        booking away. Come explore the world with us!</i>
+      </p>
+    </div>
+
+    <div class="text-right">
+      <img src="nairobinationalpark.jpg" alt="Sample Image" class="img-fluid">
+    </div>
+  </div>
+
+  <div class="center-text">
+    <h3 class="third"><b>Our Commitment to Excellence,</b></h3>
     <p>
      <i>At<b>Janja Tours and Travels</b>, we pride ourselves on offering not just tours,
       but meaningful experiences. We believe that travel is about more than just
@@ -60,33 +259,94 @@
       but also responsible and enriching. Your satisfaction is our top priority,
       and we are here to guide you every step of the way.</i>
     </p>
-    <br>
-    <br>
-    <p><h2 style="text-align: center;"><i>WHY CHOOSE US?</i></h2></p>
-    <div class="ken">
-      <div class="card-body">
-        <h3 class="card-title">Leading tours and travelling company</h3>
-        <br>
-        <p class="card-text">
-          <i>At Janja Tours and Travel, we pride ourselves on providing personalized travel experiences tailored to each client's preferences. Whether you're seeking a relaxing beach holiday, an adventurous safari, or a cultural exploration, we craft itineraries that match your interests, ensuring every trip is memorable and unique.</i>
+  </div>
+</div>
+<br>
+<br>
+<h3 class="fourth"><i>Here are some of our customer reviews:</i></h3>
+<div class="container testimonial-container">
+  <div class="row">
+    <!-- Testimonial 1 - 5 Stars -->
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <div class="stars">
+          <!-- 5 Star Rating -->
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          "This travel experience was absolutely amazing! Everything was well-organized, and the sights were breathtaking."
         </p>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Best tour packages</h3>
-        <br>
-        <p class="card-text">
-          <i>Our team of experienced professionals is dedicated to making your journey seamless. From booking flights to arranging accommodations and guided tours, we handle all the details, allowing you to focus on enjoying your vacation. We also offer 24/7 customer support to assist you before, during, and after your travels.<i</p>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Reliable travelling agency</h3>
-        <br>
-        <p class="card-text">
-          <i>What sets us apart is our commitment to customer satisfaction. We work with trusted partners and local experts to provide you with the best value for your money. With competitive pricing and a focus on quality service, you can trust Janja Tours and Travel to deliver an exceptional travel experience that exceeds expectations.</i>
-        </p>
+        <p class="testimonial-author">Didier Drogba</p>
       </div>
     </div>
-    <br>
-    <br>
-    <a href="toursandtravel.html" class="travels"><b><i>Janja tours and travels</i></b></a>
-  </body>
+    <!-- Testimonial 2 - 4.5 Stars -->
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <div class="stars">
+          <!-- 4.5 Star Rating -->
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p class="testimonial-text">
+          "Had a great time! The tour guides were knowledgeable and friendly. Only one small issue with transportation."
+        </p>
+        <p class="testimonial-author">Cole Palmer</p>
+      </div>
+    </div>
+    <!-- Testimonial 3 - 4.5 Stars -->
+    <div class="col-md-4">
+      <div class="testimonial-card">
+        <div class="stars">
+          <!-- 4.5 Star Rating -->
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p class="testimonial-text">
+          "The trip was nice, but there were a few delays. Still, it was a fun experience overall."
+        </p>
+        <p class="testimonial-author">Ken Musyaah</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<footer>
+  <div class="footer-container">
+    <p>&copy; 2025 Janja Tours and Travel. All Rights Reserved.</p>
+    <div class="social-links">
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-google" aria-hidden="true"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

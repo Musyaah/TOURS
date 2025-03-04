@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maasai Mara Wildlife Activities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .content-img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px; /
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .money{
+    margin: 50px;
+    padding: 20px;
+  }
+  .navbar .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+    }
+
+    .ken {
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    .ben {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .one {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1.5rem;
+    }
+
+    .first {
+      font-size: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-description p {
+      font-size: 0.9rem;
+    }
+  }
+  .navbar-toggler-icon {
+  background-color: white !important;
+  border: none !important; 
+}
+footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-container p {
+        font-size: 16px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .social-links a:hover {
+        color: #f4b400;
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="logo">
+              <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+            </div>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto"> 
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="toursandtravel.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="destinations.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="packages.html">Packages</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="aboutus.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="watch.html">Contact us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
+                    <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+<h3><i>Maasai mara game reserve:</i></h3>
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <img src="maasaimara.jpg" alt="Wildlife Image" class="content-img">
+        </div>
+        <div class="col-md-6">
+            <p> <b>The Maasai Mara National Reserve</b> is one of the most famous wildlife conservation areas in Kenya.
+                 It is home to an incredible diversity of wildlife, including the Big Five—lions, elephants, buffalo, 
+                 leopards, and rhinoceroses—and offers some of the best safari experiences in the world. The reserve
+                  is also renowned for the Great Migration, where millions of wildebeest and zebras migrate across the
+                   plains each year.</p>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                <h3><i>Wildlife:</i></h3>In addition to the breathtaking wildlife, Maasai Mara offers several exciting activities for nature lovers,
+                 adventure seekers, and photography enthusiasts. From thrilling game drives to cultural experiences, visitors
+                  can enjoy a range of activities that immerse them in the beauty of the African savannah.</p>
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <h3><i>Activities:</i></h3>
+                <li>Game Drives to spot the Big Five</li>
+                <li>Hot Air Balloon Safari over the Mara plains</li>
+                <li>Guided Nature Walks with local experts</li>
+                <li>Visit a Maasai Village for a cultural experience</li>
+                <li>Bird watching, with over 450 species to spot</li>
+                <li>Night Game Drives to observe nocturnal wildlife</li>
+                <li>Camping under the stars in the reserve</li>
+                <li>Photography safaris for capturing stunning wildlife shots</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Janja Tours and Travel. All Rights Reserved.</p>
+      <div class="social-links">
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-google" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

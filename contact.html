@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Janja Tours and Travels</title>
     <link rel="stylesheet" href="destinations.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
+            background-color: bisque;
         }
 
         .contact-form {
@@ -76,7 +79,7 @@
         }
 
         .submit-btn:active {
-            background-color: #1a66b5;
+            background-color: chocolate;
             transform: scale(0.98);
         }
 
@@ -95,12 +98,179 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .money{
+    margin: 50px;
+    padding: 20px;
+  }
+  .navbar .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 90%;
+    }
+
+    .ken {
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    .ben {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .one {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1.5rem;
+    }
+
+    .first {
+      font-size: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+    }
+
+    .card-description p {
+      font-size: 0.9rem;
+    }
+  }
+  footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .footer-container p {
+        font-size: 16px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .social-links a:hover {
+        color: #f4b400;
+      }
     </style>
 </head>
 <body>
-
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#">Janja tours and travel</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="toursandtravel.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="watch.html">Contact us</a></li>
+            <li class="dropdown">
+              <a href="#">More</a>
+              <ul class="dropdown-content">
+                <li><a href="contact.html">Request a quote</a></li>
+                <li><a href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+      </header>
+      <br>
     <div class="contact-form">
-        <h2>Contact Us</h2>
+        <h2 style="color: chocolate;">Request a quote</h2>
         <form id="contactForm">
             <div class="form-group">
                 <label for="name">Full Name</label>
@@ -165,7 +335,33 @@
         });
     </script>
     <br>
-    <br>
-    <a href="toursandtravel.html" class="travels"><b><i>Janja tours and travels</i></b></a>
+    <footer>
+        <div class="footer-container">
+          <p>&copy; 2025 Janja Tours and Travel. All Rights Reserved.</p>
+          <div class="social-links">
+            <div>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-google" aria-hidden="true"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="" class="me-4 text-reset">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
 </body>
 </html>
