@@ -139,145 +139,126 @@
       }
 
       .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: #333;
-        color: white;
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 20px;
-      }
-
-      .nav-links li a {
-        color: white;
-        text-decoration: none;
-      }
-
-      .menu-icon {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
-      }
-      @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 20px;
   }
 
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
   }
 
   .menu-icon {
-    display: block;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
   }
 
-  .nav-links.active {
-    display: flex;
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
+
+  .money{
+    margin: 50px;
+    padding: 20px;
+  }
+  .navbar .logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
 }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #333;
-        padding: 10px;
-        list-style: none;
-      }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
 
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
 
-      .money{
-        margin: 50px;
-        padding: 20px;
-      }
-      @media (max-width: 768px) {
-        .navbar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
 
-        .nav-links {
-          display: none;
-          flex-direction: column;
-          width: 100%;
-        }
+    .nav-links.active {
+      display: flex;
+    }
 
-        .nav-links li {
-          text-align: center;
-          padding: 10px 0;
-        }
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .menu-icon {
-          display: block;
-          position: absolute;
-          top: 20px;
-          right: 20px;
-        }
+    .card {
+      width: 90%;
+    }
 
-        .nav-links.active {
-          display: flex;
-        }
+    .ken {
+      flex-direction: column;
+      margin: 20px;
+    }
 
-        .card-container {
-          flex-direction: column;
-          align-items: center;
-        }
+    .ben {
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .card {
-          width: 90%;
-        }
+    .one {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  }
 
-        .ken {
-          flex-direction: column;
-          margin: 20px;
-        }
+  @media (max-width: 480px) {
+    .overlay-text {
+      font-size: 1.5rem;
+    }
 
-        .ben {
-          flex-direction: column;
-          align-items: center;
-        }
+    .first {
+      font-size: 1.2rem;
+    }
 
-        .one {
-          width: 90%;
-          margin-bottom: 20px;
-        }
-      }
+    .card-title {
+      font-size: 1rem;
+    }
 
-      @media (max-width: 480px) {
-        .overlay-text {
-          font-size: 1.5rem;
-        }
-
-        .first {
-          font-size: 1.2rem;
-        }
-
-        .card-title {
-          font-size: 1rem;
-        }
-
-        .card-description p {
-          font-size: 0.9rem;
-        }
-      }
+    .card-description p {
+      font-size: 0.9rem;
+    }
+  }
+  .navbar-toggler-icon {
+  background-color: white !important;
+  border: none !important; 
+}
       .container {
       display: flex; 
       align-items: center;
@@ -306,52 +287,139 @@
 .text-container {
   width: 35%;
   font-family: Arial, sans-serif;
+  margin: 20px 0; /* Adds some space around the text */
 }
 
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the carousel and text vertically on smaller screens */
+    align-items: center;
+  }
+  
+  .carousel {
+    width: 100%; /* Make the carousel take full width */
+    margin-right: 0; /* Remove the margin between carousel and text */
+  }
+
   .text-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
+    width: 90%; /* Make text container take up most of the screen */
+    text-align: center; /* Center the text for better mobile view */
+    margin-top: 20px; /* Add some margin to separate it from the carousel */
+  }
+
+  /* Style adjustments for smaller screens */
+  .text-container h2 {
+    font-size: 1.5rem; /* Adjust font size for better readability */
+  }
+  
+  .text-container p {
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 }
-    .text-container h2 {
-      margin-bottom: 20px;
-    }
 
-    .text-container p {
-      font-size: 16px; 
-      color: #333; 
-    }
-    .ten{
-      display: flex;
-      gap: 10px;
-      flex-wrap: nowrap;
-      margin: 40px;
-    }
+/* Even smaller devices (like phones in portrait mode) */
+@media (max-width: 480px) {
+  .text-container h2 {
+    font-size: 1.3rem; /* Make the heading font smaller */
+  }
+
+  .text-container p {
+    font-size: 0.9rem; /* Make the paragraph text smaller */
+  }
+}
+    /* Default layout for larger screens */
+.ten {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  gap: 20px;
+  padding: 50px;
+}
+
+.card-body {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text i {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 1024px) {
+  .ten {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .ten {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    padding: 20px;
+  }
+
+  .card-body {
+    padding: 15px; /* Slightly smaller padding on small screens */
+  }
+
+  .card-title {
+    font-size: 1.125rem; /* Slightly smaller title font */
+  }
+
+  .card-text i {
+    font-size: 0.95rem; /* Smaller text for readability on small screens */
+  }
+}
+
     </style>
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="#">Janja tours and travel</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="toursandtravel.html">Home</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a href="aboutus.html">About us</a></li>
-          <li><a href="watch.html">Contact us</a></li>
-          <li class="dropdown">
-            <a href="#">More</a>
-            <ul class="dropdown-content">
-              <li><a href="contact.html">Request a quote</a></li>
-              <li><a href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="logo">
+            <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+          </div>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> 
+              <li class="nav-item">
+                <a class="nav-link text-white" href="toursandtravel.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="packages.html">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="aboutus.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="watch.html">Contact us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
+                  <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+          </div>
+        </div>
       </nav>
     </header>
     <br>

@@ -11,7 +11,7 @@
     />
   <style>
     body{
-        background-color: antiquewhite;
+        background-color: bisque;
     }
     .package-card {
       margin-bottom: 30px;
@@ -185,6 +185,10 @@
       font-size: 0.9rem;
     }
   }
+  .navbar-toggler-icon {
+  background-color: white !important;
+  border: none !important; 
+}
   footer {
         background-color: #333;
         color: white;
@@ -220,28 +224,47 @@
   </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-          <div class="logo">
-            <a href="#">Janja tours and travel</a>
-          </div>
-          <ul class="nav-links">
-            <li><a href="toursandtravel.html">Home</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="watch.html">Contact us</a></li>
-            <li class="dropdown">
-              <a href="#">More</a>
-              <ul class="dropdown-content">
-                <li><a href="contact.html">Request a quote</a></li>
-                <li><a href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto"> 
+            <li class="nav-item">
+              <a class="nav-link text-white" href="toursandtravel.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="packages.html">Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="aboutus.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="watch.html">Contact us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
+                <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
               </ul>
             </li>
           </ul>
-          <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        </nav>
-      </header>
+        </div>
+      </div>
+    </nav>
+  </header>
       <br>
 <div class="container my-5">
   <h2 class="text-center mb-5">Our tour packages:</h2>
