@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Search - TripAdvisor API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8f8f8;
+        }
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .search-box input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .search-box button {
+            background: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hotel-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .hotel {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        }
+        .hotel h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Search for Hotels</h2>
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter a city name...">
+        <button onclick="getHotels()">Search Hotels</button>
+    </div>
+
+    <!-- Hotels List -->
+    <div id="hotels" class="hotel-list"></div>
+
+    <script>
+        async function getHotels() {
+            let apiKey = " bba55ca602msh320f2c4088e469ep14d55ajsn27bb45474d7d"; // Replace with your actual API key
+            let location = document.getElementById("cityInput").value;
+            
+            if (!location) {
+                alert("Please enter a city name!");
+                return;
+            }
+
+            let url = `https://tripadvisor1.p.rapidapi.com/hotels/search?location=${location}`;
+
+            try {
+                let response = await fetch(url, {
+                    method: "GET",
+                    headers: {
+                        "X-RapidAPI-Key": apiKey,
+                        "X-RapidAPI-Host": "tripadvisor1.p.rapidapi.com"
+                    }
+                });
+
+                let data = await response.json();
+                displayHotels(data);
+            } catch (error) {
+                console.error("Error fetching hotels:", error);
+            }
+        }
+
+        function displayHotels(data) {
+            let hotelsContainer = document.getElementById("hotels");
+            hotelsContainer.innerHTML = ""; // Clear previous results
+            
+            if (!data || !data.results || data.results.length === 0) {
+                hotelsContainer.innerHTML = "<p>No hotels found for this location.</p>";
+                return;
+            }
+
+            let hotelsList = data.results.map(hotel => 
+                `<div class="hotel">
+                    <h3>${hotel.name}</h3>
+                    <p>Rating: ${hotel.rating || "N/A"} ⭐</p>
+                    <p>Price: ${hotel.price || "Not Available"}</p>
+                </div>`
+            ).join("");
+
+            hotelsContainer.innerHTML = hotelsList;
+        }
+    </script>
+
+</body>
+</html>

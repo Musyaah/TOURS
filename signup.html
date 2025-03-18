@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: bisque;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <input type="text" id="signupUsername" placeholder="Enter Username" required>
+        <input type="email" id="signupEmail" placeholder="Enter Email" required>
+        <input type="password" id="signupPassword" placeholder="Enter Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button onclick="signup()">Sign Up</button>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        function signup() {
+            let username = document.getElementById("signupUsername").value;
+            let email = document.getElementById("signupEmail").value;
+            let password = document.getElementById("signupPassword").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (!username || !email || !password || !confirmPassword) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Store user data in localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+
+            alert("Account created successfully!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+
+</body>
+</html>

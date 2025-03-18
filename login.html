@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: bisque;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" id="loginUsername" placeholder="Enter Username" required>
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+        <button onclick="login()">Login</button>
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+
+    <script>
+        function login() {
+            let enteredUsername = document.getElementById("loginUsername").value;
+            let enteredPassword = document.getElementById("loginPassword").value;
+
+            let storedUsername = localStorage.getItem("username");
+            let storedPassword = localStorage.getItem("password");
+
+            if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+                alert("Login successful!");
+                window.location.href = "toursandtravel.html"; // Redirect to a dashboard or home page
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+
+</body>
+</html>

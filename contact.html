@@ -248,6 +248,10 @@
       .social-links a:hover {
         color: #f4b400;
       }
+      .first{
+  text-align: center;
+  color: black;
+}
     </style>
 </head>
 <body>
@@ -255,7 +259,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="logo">
-          <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+          <a class="navbar-brand text-white" href="#">Janja Tours and Travel</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -284,7 +288,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
-                <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                <li><a class="dropdown-item" href="sample.html">JanjaQuest</a></li>
               </ul>
             </li>
           </ul>
@@ -294,12 +298,41 @@
   </header>
       <br>
     <div class="contact-form">
+      <h4 class="first"
+  style="
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  "
+>
+  "Think Travel, Think Janja"
+</h4>
         <h2 style="color: chocolate;">Request a quote</h2>
         <form id="contactForm">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your full name">
             </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+        
+            <label for="phone">Phone Number</label>
+            <div style="display: flex; align-items: center; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
+                <select id="countryCode" style="padding: 10px; background-color: #f8f8f8; border: none; font-size: 1rem;">
+                    <option value="+254">🇰🇪 +254 (Kenya)</option>
+                    <option value="+255">🇹🇿 +255 (Tanzania)</option>
+                    <option value="+256">🇺🇬 +256 (Uganda)</option>
+                    <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                    <option value="+1">🇺🇸 +1 (USA)</option>
+                    <option value="+44">🇬🇧 +44 (UK)</option>
+                    <option value="+27">🇿🇦 +27 (South Africa)</option>
+                </select>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{9,10}" placeholder="Enter phone number" required 
+                    style="flex: 1; padding: 10px; border: none; font-size: 1rem;">
+            </div>
+            <div id="phoneError" class="error"></div>
+            
             <div class="form-group">
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" required placeholder="Enter your age">
@@ -312,9 +345,43 @@
                 <label for="children">Number of Children</label>
                 <input type="number" id="children" name="children" required placeholder="Number of children">
             </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+            <div class="mb-3">
+              <label for="children-age" class="form-label">Age of Children (if applicable)</label>
+              <input type="text" class="form-control" id="children-age" name="children-age" placeholder="Enter children's age(s)">
+            </div>
+        
+            <div class="mb-3">
+              <label for="currency" class="form-label">Preferred Currency</label>
+              <select class="form-select" id="currency" name="currency" required>
+                <option value="USD">USD (US Dollar)</option>
+                <option value="EUR">EUR (Euro)</option>
+                <option value="GBP">GBP (British Pound)</option>
+                <option value="KES">KES (Kenyan Shilling)</option>
+                <option value="ZAR">ZAR (South African Rand)</option>
+              </select>
+            </div>
+        
+            <div class="mb-3">
+              <label for="safari-type" class="form-label">Type of Safari</label>
+              <select class="form-select" id="safari-type" name="safari-type" required>
+                <option value="adventure">Adventure Safari</option>
+                <option value="luxury">Luxury Safari</option>
+                <option value="budget">Budget Safari</option>
+                <option value="family">Family Safari</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="travel-dates" class="form-label">Travel Dates:</label>
+              <div class="d-flex">
+                <div class="me-3">
+                  <label for="start-date" class="form-label">Start Date</label>
+                  <input type="date" class="form-control" id="start-date" name="start-date" required>
+                </div>
+                <div>
+                  <label for="end-date" class="form-label">End Date</label>
+                  <input type="date" class="form-control" id="end-date" name="end-date" required>
+                </div>
+              </div>
             </div>
             <div class="form-group">
                 <label for="country">Country</label>
@@ -336,27 +403,20 @@
     <div id="output"></div> 
     <script>
        
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-            const adults = document.getElementById('adults').value;
-            const children = document.getElementById('children').value;
-            const phone = document.getElementById('phone').value;
-            const country = document.getElementById('country').value;
+       document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
 
-            
-            if (name && age && adults && children && phone && country) {
-                
-                document.getElementById('output').textContent = `Thank you, ${name}! Your message has been submitted. We will contact you soon.`;
+    if (name && phone) {
+        alert(`Thank you, ${name}! Your request has been submitted. We will contact you soon.`);
+        document.getElementById('contactForm').reset();
+    } else {
+        alert('Please fill in all the required fields before submitting.');
+    }
+});
 
-                
-                document.getElementById('contactForm').reset();
-            } else {
-                document.getElementById('output').textContent = 'Please fill in all the fields before submitting.';
-            }
-        });
     </script>
     <br>
     <footer>

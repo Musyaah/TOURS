@@ -304,7 +304,7 @@
   .text-container {
     width: 90%; /* Make text container take up most of the screen */
     text-align: center; /* Center the text for better mobile view */
-    margin-top: 20px; /* Add some margin to separate it from the carousel */
+    /* margin-top: 20px; Add some margin to separate it from the carousel */
   }
 
   /* Style adjustments for smaller screens */
@@ -385,7 +385,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid d-flex justify-content-between align-items-center">
           <div class="logo">
-            <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+            <a class="navbar-brand text-white" href="#">Janja Tours and Travel</a>
           </div>
   
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -414,7 +414,16 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
-                  <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                  <li><a class="dropdown-item" href="sample.html">JanjaQuest</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  Profile
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a id="dropdown-item" href="#">Log out</a></li>
                 </ul>
               </li>
             </ul>
@@ -476,7 +485,7 @@
 
   <!-- Text Section -->
   <div class="text-container">
-    <h2><b>Why choose Janja tours and travels?</b></h2>
+    <h2><b>Why choose Janja Tours and Travels?</b></h2>
     <p><i>
       With Janja Tours and Travels, every journey becomes an unforgettable experience.
        We offer expertly planned itineraries, personalized service, and a deep passion for travel.
@@ -762,6 +771,14 @@
         const navLinks = document.querySelector(".nav-links");
         navLinks.classList.toggle("active");
       }
+      const logoutBtn = document.getElementById("dropdown-item");
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("user");
+            window.location.href = "login.html";
+        });
+    }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>

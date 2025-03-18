@@ -221,6 +221,74 @@
       text-decoration: none;
       color: black;
      }
+     .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+            background: #fff;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-description {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background: #0069d9;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover {
+            background: #cc5200;
+        }
+
+        .second {
+            text-decoration: none;
+            color:chocolate;
+        }
+
+        .second:hover {
+            text-decoration: underline;
+        }
+        .first{
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+}
   </style>
 </head>
 <body>
@@ -228,7 +296,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="logo">
-          <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+          <a class="navbar-brand text-white" href="#">Janja Tours and Travel</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,7 +325,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
-                <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                <li><a class="dropdown-item" href="sample.html">JanjaQuest</a></li>
               </ul>
             </li>
           </ul>
@@ -267,6 +335,14 @@
   </header>
       <br>
 <div class="container my-5">
+  <h4 class="first"
+  style="
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  "
+>
+  "Think Travel, Think Janja"
+</h4>
   <h2 class="text-center mb-5">Our tour packages:</h2>
 
   <div class="row">
@@ -392,7 +468,170 @@
   </div>
   
 </div>
+<h3 style="text-align: center;"><i><b>Janja Getaways:</b></i></h3>
 
+<div class="card-container">
+    <div class="card">
+        <img src="maasaimara.jpg" alt="Maasai Mara" />
+        <div class="card-description">
+            <h3><a href="maasaimara.html" class="second">Maasai Mara Safari</a></h3>
+            <p><i>Experience the Great Migration and Big Five safaris.</i></p>
+            <p><strong>Duration:</strong> 3-7 Days</p>
+            <p><strong>Price:</strong> From $500</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="nairobinationalpark.jpg" alt="Nairobi National Park" />
+        <div class="card-description">
+            <h3><a href="Nairobi.html" class="second">Nairobi National Park Tour</a></h3>
+            <p><i>See wildlife just outside the city, including lions and giraffes.</i></p>
+            <p><strong>Duration:</strong> 1 Day</p>
+            <p><strong>Price:</strong> From $100</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="istockphoto-1171980595-612x612.jpg" alt="Amboseli National Park" />
+        <div class="card-description">
+            <h3><a href="amboseli.html" class="second">Amboseli National Park</a></h3>
+            <p><i>Large elephant herds with Mt. Kilimanjaro as a backdrop.</i></p>
+            <p><strong>Duration:</strong> 2-4 Days</p>
+            <p><strong>Price:</strong> From $450</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+      </div>
+    <div class="card">
+        <img src="lakenakuru.jpg" alt="Lake Nakuru" />
+        <div class="card-description">
+            <h3><a href="lakenakuru.html" class="second">Lake Nakuru Flamingo Safari</a></h3>
+            <p><i>Famous for pink flamingos and rhinos.</i></p>
+            <p><strong>Duration:</strong> 1-2 Days</p>
+            <p><strong>Price:</strong> From $150</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="mtkenyanatpark.jpg" alt="Mount Kenya" />
+        <div class="card-description">
+            <h3><a href="mountkenya.html" class="second">Mount Kenya Trek</a></h3>
+            <p><i>Climb Kenya’s highest peak with breathtaking alpine scenery.</i></p>
+            <p><strong>Duration:</strong> 3-7 Days</p>
+            <p><strong>Price:</strong> From $700</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="serengeti.jpg" alt="Serengeti National Park" />
+        <div class="card-description">
+            <h3><a href="serengeti.html" class="second">Serengeti Migration Safari</a></h3>
+            <p><i>Witness the great wildebeest migration.</i></p>
+            <p><strong>Duration:</strong> 4-7 Days</p>
+            <p><strong>Price:</strong> From $800</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="shimbahills.jpeg" alt="Shimba Hills" />
+        <div class="card-description">
+            <h3><a href="shimbahills.html" class="second">Shimba Hills Safari</a></h3>
+            <p><i>Scenic coastal rainforest with elephants and waterfalls.</i></p>
+            <p><strong>Duration:</strong> 1-2 Days</p>
+            <p><strong>Price:</strong> From $120</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="tsavowest.jpeg" alt="Tsavo National Park" />
+        <div class="card-description">
+            <h3><a href="tsavo.html" class="second">Tsavo National Park Safari</a></h3>
+            <p><i>Famous for red elephants and rugged wilderness.</i></p>
+            <p><strong>Duration:</strong> 2-5 Days</p>
+            <p><strong>Price:</strong> From $350</p>
+            <button class="btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+    <div class="card">
+      <img src="hellsgate.jpg" alt="Hell's Gate National Park" />
+      <div class="card-description">
+          <h3><a href="hellsgate.html" class="second">Hell's Gate National Park</a></h3>
+          <p><i>Explore dramatic cliffs, gorges, and geothermal activity in this adventurous park.</i></p>
+          <p><strong>Duration:</strong> 1-2 Days</p>
+          <p><strong>Price:</strong> From $100</p>
+          <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+      </div>
+  </div>
+    <div class="card">
+        <img src="mombasamarine.jpg" alt="Mombasa Marine Park" />
+        <div class="card-description">
+            <h3><a href="mombasamarine.html" class="second">Mombasa Marine Park</a></h3>
+            <p><i>Snorkel, dive, and explore vibrant coral reefs teeming with marine life.</i></p>
+            <p><strong>Duration:</strong> Half-Day to 1 Day</p>
+            <p><strong>Price:</strong> From $80</p>
+            <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="Meru natpark.jpg" alt="Meru National Park" />
+        <div class="card-description">
+            <h3><a href="meru.html" class="second">Meru National Park</a></h3>
+            <p><i>Untamed wilderness with rare wildlife, scenic landscapes, and rivers.</i></p>
+            <p><strong>Duration:</strong> 2-5 Days</p>
+            <p><strong>Price:</strong> From $400</p>
+            <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="menengai.jpg" alt="Menengai Crater" />
+        <div class="card-description">
+            <h3><a href="menengai.html" class="second">Menengai Crater Hike</a></h3>
+            <p><i>Hike to one of Africa’s largest volcanic craters with breathtaking views.</i></p>
+            <p><strong>Duration:</strong> Half-Day to 1 Day</p>
+            <p><strong>Price:</strong> From $50</p>
+            <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+        </div>
+    </div>
+      <div class="card">
+          <img src="malindisanddunes.jpg" alt="Mambrui Sand Dunes" />
+          <div class="card-description">
+              <h3><a href="mambrui.html" class="second">Mambrui Sand Dunes</a></h3>
+              <p><i>Golden desert-like dunes along the Kenyan coast, perfect for adventure and sandboarding.</i></p>
+              <p><strong>Duration:</strong> Half-Day to 1 Day</p>
+              <p><strong>Price:</strong> From $60</p>
+              <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+          </div>
+      </div>
+  
+      <div class="card">
+          <img src="tarangirenatpark.jpeg" alt="Tarangire National Park" />
+          <div class="card-description">
+              <h3><a href="tarangire.html" class="second">Tarangire National Park</a></h3>
+              <p><i>Known for its massive elephant herds, iconic baobab trees, and rich wildlife.</i></p>
+              <p><strong>Duration:</strong> 2-4 Days</p>
+              <p><strong>Price:</strong> From $500</p>
+              <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+          </div>
+      </div>
+  
+      <div class="card">
+          <img src="Ruahanatpark.jpeg" alt="Ruaha National Park" />
+          <div class="card-description">
+              <h3><a href="ruaha.html" class="second">Ruaha National Park</a></h3>
+              <p><i>A remote wilderness paradise with diverse wildlife, including lions and wild dogs.</i></p>
+              <p><strong>Duration:</strong> 3-6 Days</p>
+              <p><strong>Price:</strong> From $700</p>
+              <button class="btn btn-primary"><a href="contact.html" style="color: white; text-decoration: none; display: block; padding: 10px 15px; width: 100%;">Book Now</a></button>
+          </div>
+      </div>
+  
+</div>
 <script>
   
   const buttons = document.querySelectorAll('.btn-package');

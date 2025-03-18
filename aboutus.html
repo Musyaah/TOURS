@@ -226,6 +226,35 @@
     .fourth{
       text-align: center;
     }
+    .star-rating {
+             display: flex;
+             justify-content: center;
+             font-size: 1.5rem;
+             cursor: pointer;
+        }
+        .star-rating i {
+           color: gray;
+        }
+        .star-rating i.active {
+          color: gold;
+        }
+        .commitment-section {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adds spacing between the video and text */
+}
+
+.live-video {
+    flex: 1; /* Ensures the video takes up equal space */
+}
+
+.center-text {
+    flex: 2; /* Gives more space to the text */
+}
+.first{
+  text-align: center;
+  color: black;
+}
   </style>
 </head>
 <body>
@@ -233,7 +262,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="logo">
-          <a class="navbar-brand text-white" href="#">Janja tours and travel</a>
+          <a class="navbar-brand text-white" href="#">Janja Tours and Travel</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -262,7 +291,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="contact.html">Request a quote</a></li>
-                <li><a class="dropdown-item" href="https://youtu.be/OtzeipvnB10?si=iPnDuTWYV775XKH6">Our vlog</a></li>
+                <li><a class="dropdown-item" href="sample.html">JanjaQuest</a></li>
               </ul>
             </li>
           </ul>
@@ -270,47 +299,65 @@
       </div>
     </nav>
   </header>
-
   <br>
+  <h4 class="first"
+  style="
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  "
+>
+  "Think Travel, Think Janja"
+</h4>
   <div class="container mt-5">
     <div class="flex-container">
-      <div class="text-left">
-        <h2 class="third">About us:</h2>
-        <p>
-          <i>At <b>Janja Tours and Travels</b>, we are passionate about creating
-          unforgettable travel experiences. With years of expertise in the tourism
-          industry, we specialize in curating personalized tours that cater to every
-          traveler’s needs. Whether you're seeking an adventure in nature, a
-          cultural immersion, or a relaxing getaway, our team is dedicated to
-          providing you with exceptional service and expert guidance. From booking
-          flights and accommodations to organizing local excursions and tours, we
-          take care of every detail, ensuring that your journey is seamless and
-          memorable. At Janja Tours and Travels, your dream vacation is just a
-          booking away. Come explore the world with us!</i>
-        </p>
-      </div>
+        <div class="text-left">
+            <h2 class="third">About us:</h2>
+            <p>
+                <i>At <b>Janja Tours and Travels</b>, we are passionate about creating
+                    unforgettable travel experiences. With years of expertise in the tourism
+                    industry, we specialize in curating personalized tours that cater to every
+                    traveler’s needs. Whether you're seeking an adventure in nature, a
+                    cultural immersion, or a relaxing getaway, our team is dedicated to
+                    providing you with exceptional service and expert guidance. From booking
+                    flights and accommodations to organizing local excursions and tours, we
+                    take care of every detail, ensuring that your journey is seamless and
+                    memorable. At Janja Tours and Travels, your dream vacation is just a
+                    booking away. Come explore the world with us!</i>
+            </p>
+        </div>
 
-      <div class="text-right">
-        <img src="nairobinationalpark.jpg" alt="Sample Image" class="img-fluid">
-      </div>
+        <div class="text-right">
+            <img src="nairobinationalpark.jpg" alt="Sample Image" class="img-fluid">
+        </div>
     </div>
 
-    <div class="center-text">
-      <h3 class="third"><b>Our Commitment to Excellence,</b></h3>
-      <p>
-       <i>At<b>Janja Tours and Travels</b>, we pride ourselves on offering not just tours,
-        but meaningful experiences. We believe that travel is about more than just
-        seeing new places – it’s about connecting with diverse cultures,
-        discovering hidden gems, and creating memories that last a lifetime. Our
-        dedicated team is committed to ensuring that every trip is tailored to
-        your preferences, providing expert advice, local insights, and the highest
-        level of customer care. With a focus on safety, reliability, and
-        sustainability, we aim to make every journey with us not only enjoyable
-        but also responsible and enriching. Your satisfaction is our top priority,
-        and we are here to guide you every step of the way.</i>
-      </p>
+    <!-- Flex container for the live video and text -->
+    <div class="commitment-section">
+        <div class="live-video">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/iE4tJmVO_As?si=z-Wf_9D56rF6KM0w" 
+                title="YouTube Live Stream" frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="center-text">
+            <h3 class="third"><b>Our Commitment to Excellence</b></h3>
+            <p>
+                <i>At <b>Janja Tours and Travels</b>, we pride ourselves on offering not just tours,
+                    but meaningful experiences. We believe that travel is about more than just
+                    seeing new places – it’s about connecting with diverse cultures,
+                    discovering hidden gems, and creating memories that last a lifetime. Our
+                    dedicated team is committed to ensuring that every trip is tailored to
+                    your preferences, providing expert advice, local insights, and the highest
+                    level of customer care. With a focus on safety, reliability, and
+                    sustainability, we aim to make every journey with us not only enjoyable
+                    but also responsible and enriching. Your satisfaction is our top priority,
+                    and we are here to guide you every step of the way.</i>
+            </p>
+        </div>
     </div>
-  </div>
+</div>
+
   <br>
   <br>
   <h3 class="fourth"><i>Here are some of our customer reviews:</i></h3>
@@ -371,6 +418,39 @@
       </div>
     </div>
   </div>
+  <h4 class="text-center mt-3">Rate Us</h4>
+        <div class="star-rating">
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+            var stars = document.querySelectorAll('.star-rating i');
+            function clearStars() {
+                for (var j = 0; j < stars.length; j++) {
+                    stars[j].classList.remove('bxs-star');
+                    stars[j].classList.add('bx-star');
+                    stars[j].style.color = 'gray';
+                }
+            }
+            for (var i = 0; i < stars.length; i++) {
+                stars[i].setAttribute('data-index', i);
+                stars[i].addEventListener('click', function () {
+                    var index = this.getAttribute('data-index');
+                    clearStars();
+                    for (var k = 0; k <= index; k++) {
+                        stars[k].classList.remove('bx-star');
+                        stars[k].classList.add('bxs-star');
+                        stars[k].style.color = 'gold';
+                    }
+                });
+            }
+        });
+        </script>
   <br>
   <!-- Footer -->
   <footer>
@@ -400,8 +480,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
